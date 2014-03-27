@@ -21,6 +21,7 @@ class ModuleNewsArticle extends \ModuleNewsReader
 		$this->blnAddArchive = $blnAddArchive;
 		$this->news_template = $objThis->news_template;
 		$this->objArticle->cssClass = (strlen($this->objNews->cssClass) ? $this->objNews->cssClass . ' ' .$objThis->cssID[1] : $objThis->cssID[1]);
+		$this->objArticle->cssID =  $objThis->cssID[0];
 		$this->objArticle->size = $objThis->size;
 		$this->imgSize = $objThis->size;
 		$this->news_metaFields = $objThis->news_metaFields;

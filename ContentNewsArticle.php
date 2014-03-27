@@ -23,7 +23,7 @@ class ContentNewsArticle extends \ContentElement
 		{
 			$objTemplate = new \BackendTemplate('be_wildcard');
 			$objTemplate->wildcard  = '### NEWSARTICLE ### <br /><br />';
-			$objTemplate->wildcard .= $newsarticle->generate();
+			//$objTemplate->wildcard .= $newsarticle->generate();
 			return $objTemplate->parse();
 		}
 
