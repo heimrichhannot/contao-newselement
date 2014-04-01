@@ -17,18 +17,18 @@ class ContentNewsArticle extends \ContentElement
 			return '';
 		}
 
-		$newsarticle = new ModuleNewsArticle($objArticle, $this);
-
 		if(TL_MODE == 'BE')
 		{
 			$objTemplate = new \BackendTemplate('be_wildcard');
-			$objTemplate->wildcard  = '### NEWSARTICLE ### <br /><br />';
-			$objTemplate->wildcard .= $newsarticle->generate();
+			// requires existing template from autoload.ini
+			$this->news_template = 'news_latest';
+			$newsarticle = new ModuleNewsArticle($objArticle, $this);
+			$objTemplate->wildcard = $newsarticle->generate();
+			
 			return $objTemplate->parse();
 		}
-
-
-
+		
+		$newsarticle = new ModuleNewsArticle($objArticle, $this);
 		return $newsarticle->generate();
 	}
 
