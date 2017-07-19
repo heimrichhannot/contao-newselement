@@ -1,6 +1,10 @@
 <?php
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['newsarticle'] = '{type_legend},type;{news_legend},news_archive,news,news_template,size,news_metaFields;{protected_legend:hide},protected;{expert_legend:hide},guests,invisible,cssID,space';
+
+
+$dc = &$GLOBALS['TL_DCA']['tl_content'];
+
+$dc['palettes']['newselement'] = '{type_legend},type,headline;{news_legend},news_archive,news,news_template,size,news_metaFields;{protected_legend:hide},protected;{expert_legend:hide},guests,invisible,cssID,space';
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['news_archive'] = array(
 	'label'                 => &$GLOBALS['TL_LANG']['tl_content']['news_archive'],

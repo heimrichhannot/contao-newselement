@@ -1,18 +1,18 @@
 <?php
 
-namespace HeimrichHannot;
+namespace HeimrichHannot\Newselement;
 
-class ModuleNewsArticle extends \ModuleNewsReader
+class ModuleNewsElement extends \ModuleNews
 {
 	protected $objArticle;
-
-	protected $strTemplate;
 
 	protected $blnAddArchive;
 
 	protected $news_template;
 
 	protected $imgSize;
+
+	protected $strTemplate = 'mod_newselement';
 
 	public function __construct($objArticle, $objThis, $blnAddArchive=false)
 	{
@@ -25,15 +25,24 @@ class ModuleNewsArticle extends \ModuleNewsReader
 		$this->objArticle->size = $objThis->size;
 		$this->imgSize = $objThis->size;
 		$this->news_metaFields = $objThis->news_metaFields;
+
+		// required by Module::generate()
+		$this->type = 'newselement';
+		$this->headline = $objThis->headline;
+		$this->hl = $objThis->hl;
 	}
 
 	public function generate()
 	{
-		return parent::parseArticle($this->objArticle);
+//		$this->Template = new \FrontendTemplate($this->strTemplate);
+//
+//		$this->compile();
+
+		return parent::generate();
 	}
 
 	protected function compile()
 	{
-		return '';
+		$this->Template->article = parent::parseArticle($this->objArticle);
 	}
 }

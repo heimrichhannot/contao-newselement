@@ -1,0 +1,40 @@
+{
+    "name": "heimrichhannot/contao-newselement",
+    "description": "Insert single news as content element inside contao.",
+    "keywords": [
+        "contao",
+        "news",
+        "content"
+    ],
+    "type": "contao-module",
+    "homepage": "https://github.com/heimrichhannot/contao-newselement",
+    "license": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "Heimrich & Hannot",
+            "email": "digitales@heimrich-hannot.de",
+            "homepage": "http://www.heimrich-hannot.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/heimrichhannot/contao-newselement/issues"
+    },
+    "require": {
+        "php": "~5.4 || ~7.0",
+        "contao/core-bundle": "^3.5.1 || ~4.1",
+        "contao-community-alliance/composer-plugin": "~2.4 || ~3.0"
+    },
+    "autoload": {
+        "classmap": [
+            ""
+        ]
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "": "system/modules/newselement"
+            }
+        }
+    }
+}

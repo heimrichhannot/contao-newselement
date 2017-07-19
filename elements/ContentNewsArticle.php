@@ -1,6 +1,6 @@
 <?php
 
-namespace HeimrichHannot;
+namespace HeimrichHannot\Newselement;
 
 class ContentNewsArticle extends \ContentElement
 {
@@ -22,13 +22,13 @@ class ContentNewsArticle extends \ContentElement
 			$objTemplate = new \BackendTemplate('be_wildcard');
 			// requires existing template from autoload.ini
 			$this->news_template = 'news_latest';
-			$newsarticle = new ModuleNewsArticle($objArticle, $this);
+			$newsarticle = new ModuleNewsElement($objArticle, $this);
 			$objTemplate->wildcard = $newsarticle->generate();
 			
 			return $objTemplate->parse();
 		}
 		
-		$newsarticle = new ModuleNewsArticle($objArticle, $this);
+		$newsarticle = new ModuleNewsElement($objArticle, $this);
 		return $newsarticle->generate();
 	}
 

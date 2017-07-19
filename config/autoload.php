@@ -3,11 +3,9 @@
 /**
  * Contao Open Source CMS
  *
- * Copyright (c) 2005-2013 Leo Feyer
+ * Copyright (c) 2005-2015 Leo Feyer
  *
- * @package Newsarticle
- * @link    https://contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * @license LGPL-3.0+
  */
 
 
@@ -25,6 +23,18 @@ ClassLoader::addNamespaces(array
  */
 ClassLoader::addClasses(array
 (
-	'HeimrichHannot\ModuleNewsArticle'  => 'system/modules/newsarticle/ModuleNewsArticle.php',
-	'HeimrichHannot\ContentNewsArticle' => 'system/modules/newsarticle/ContentNewsArticle.php',
+	// Modules
+	'HeimrichHannot\Newselement\ModuleNewsElement'  => 'system/modules/newselement/modules/ModuleNewsElement.php',
+
+	// Elements
+	'HeimrichHannot\Newselement\ContentNewsArticle' => 'system/modules/newselement/elements/ContentNewsArticle.php',
+));
+
+
+/**
+ * Register the templates
+ */
+TemplateLoader::addFiles(array
+(
+	'mod_newselement' => 'system/modules/newselement/templates/modules',
 ));

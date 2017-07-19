@@ -4,5 +4,5 @@
 /**
  * Content elements
  */
-$GLOBALS['TL_LANG']['CTE']['newsarticle']    = array('Newsarticle', 'Display a news as content element.');
+$GLOBALS['TL_LANG']['CTE']['newselement']    = array('News', 'Display a news as content element.');
 

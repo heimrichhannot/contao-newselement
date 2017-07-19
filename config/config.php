@@ -1,3 +1,3 @@
 <?php
 
-$GLOBALS['TL_CTE']['includes']['newsarticle'] = 'ContentNewsArticle';
+$GLOBALS['TL_CTE']['includes']['newselement'] = 'HeimrichHannot\\Newselement\\ContentNewsArticle';
