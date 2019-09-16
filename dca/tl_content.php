@@ -48,7 +48,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['news_metaFields'] = array
 	'inputType'             => 'checkbox',
 	'options'               => array('date', 'author', 'comments'),
 	'reference'             => &$GLOBALS['TL_LANG']['MSC'],
-	'eval'                  => array('multiple'=>true),
+	'eval'                  => array('multiple'=>true, 'tl_class'=>'clr'),
 	'sql'					=> "varchar(255) NOT NULL default ''",
 );
 
