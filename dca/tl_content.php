@@ -117,22 +117,7 @@ class tl_content_newsarticle extends Backend
 
 	public function getNewsTemplates(DataContainer $dc)
 	{
-		$intPid = $dc->activeRecord->pid;
-
-		// get parent Template
-		$objLayout = $this->Database->prepare("SELECT l.pid FROM tl_page p LEFT JOIN tl_article a ON a.pid = p.id LEFT JOIN tl_layout l ON l.id = p.layout WHERE a.id = ?")->execute($intPid);
-
-		if($objLayout->numRows)
-		{
-			$intPid = $objLayout->pid;
-		}
-
-		if ($this->Input->get('act') == 'overrideAll')
-		{
-			$intPid = $this->Input->get('id');
-		}
-
-		return $this->getTemplateGroup('news_', $intPid);
+		return $this->getTemplateGroup('news_');
 	}
 
 }
