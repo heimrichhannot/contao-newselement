@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## [1.2.0] - 2022-01-31
+- Changed: allow php 8
+- Changed: updated license
+
 ## [1.1.1] - 2020-07-16
 - fixed TypeError in tl_content
 
