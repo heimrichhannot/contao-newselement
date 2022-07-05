@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 
 
+## [1.3.0] - 2022-07-05
+- Changed: drop php 5 support
+- Fixed: missing frontend module translation
+- Fixed: backend not compatible with contao 4.13
+
 ## [1.2.0] - 2022-01-31
 - Changed: allow php 8
 - Changed: updated license
